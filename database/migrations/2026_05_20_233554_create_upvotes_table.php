@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('upvotes', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('laporan_id');
+            $table->string('identifier', 100);
             $table->timestamps();
         });
     }

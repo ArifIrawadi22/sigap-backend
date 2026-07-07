@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('status_history', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('laporan_id');
+            $table->string('status_baru', 50);
+            $table->text('catatan')->nullable();
+            $table->unsignedBigInteger('updated_by')->nullable();
             $table->timestamps();
         });
     }
